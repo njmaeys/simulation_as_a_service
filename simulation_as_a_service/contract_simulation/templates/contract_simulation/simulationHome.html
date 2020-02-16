@@ -1,7 +1,11 @@
 {% extends "simulation_as_a_service/base.html" %}
 {% block content %}
     <h1>Contract Simulation</h1>
-    {% for p in people %}
-    <h1>Name: {{ p.name }} Age: {{ p.age }}</h1>
-    {% endfor %}
+
+    <form action="/your-name/" method="post">
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK">
+    </form>
+
 {% endblock content %}

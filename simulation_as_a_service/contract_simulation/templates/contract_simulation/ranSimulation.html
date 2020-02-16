@@ -1,0 +1,11 @@
+{% extends "simulation_as_a_service/base.html" %}
+{% block content %}
+    <h1>Contract Simulation</h1>
+
+    {% if context.people %}
+        {% for p in people %}
+        <p>Name: {{ p.name }} Age: {{ p.age }}</p>
+        {% endfor %}
+    {% endif %}
+
+{% endblock content %}
