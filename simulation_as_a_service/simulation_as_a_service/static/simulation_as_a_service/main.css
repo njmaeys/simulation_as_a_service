@@ -13,7 +13,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #3ec77f;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -81,4 +81,20 @@ a.article-title:hover {
 
 .account-heading {
   font-size: 2.5rem;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #3ec77f;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }

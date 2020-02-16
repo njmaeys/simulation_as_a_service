@@ -1,11 +1,24 @@
 {% extends "simulation_as_a_service/base.html" %}
+{% load static %}
+
 {% block content %}
     <h1>Contract Simulation</h1>
 
-    {% if context.people %}
-        {% for p in people %}
-        <p>Name: {{ p.name }} Age: {{ p.age }}</p>
+    <p>Multiplier: {{ multiplier }}</p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Multiplied Age</th>
+        </tr>
+        {% for dd in displayData %}
+            <tr>
+                <th>{{ dd.name }}</th>
+                <th>{{ dd.age }}</th>
+                <th>{{ dd.multiplied_age }}</th>
+            </tr>
         {% endfor %}
-    {% endif %}
+    </table>
 
 {% endblock content %}

@@ -12,10 +12,18 @@ def dummyPandasDf():
 
     return df
 
-def someData():
+def someData(multiplier):
 
     df = dummyPandasDf()
+
+    df = multiplyAge(df, multiplier)
 
     returnData = df.to_dict('records')
 
     return returnData
+
+def multiplyAge(df, multiplier):
+
+    df["multiplied_age"] = df["age"] * float(multiplier)
+
+    return df
