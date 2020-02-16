@@ -4,19 +4,25 @@
 {% block content %}
     <h1>Contract Simulation</h1>
 
-    <p>Multiplier: {{ multiplier }}</p>
+    <p>Ground Disc: {{ ground }}</p>
+    <p>Express Disc: {{ express }}</p>
+    <p>International Disc: {{ international }}</p>
 
     <table>
         <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Multiplied Age</th>
+            <th>Service Type</th>
+            <th>Service Guide Rate</th>
+            <th>Net Amount</th>
+            <th>Proposed Net Amount</th>
+            <th>Savings</th>
         </tr>
         {% for dd in displayData %}
             <tr>
-                <th>{{ dd.name }}</th>
-                <th>{{ dd.age }}</th>
-                <th>{{ dd.multiplied_age }}</th>
+                <th>{{ dd.ServiceType }}</th>
+                <th>{{ dd.ServiceGuideRate }}</th>
+                <th>{{ dd.NetAmount }}</th>
+                <th>{{ dd.ProposedNetAmount }}</th>
+                <th>{{ dd.Savings }}</th>
             </tr>
         {% endfor %}
     </table>

@@ -4,8 +4,10 @@
 
     <form action="ran_simulation/" method="post">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="OK">
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
     </form>
 
 {% endblock content %}

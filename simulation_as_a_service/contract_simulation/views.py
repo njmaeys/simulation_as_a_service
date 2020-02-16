@@ -6,15 +6,19 @@ from .forms import NameForm
 
 def ranSimulation(request):
 
-    multiplier = int(request.POST.get("multiplier"))
+    ground = float(request.POST.get("ground"))
+    express = float(request.POST.get("express"))
+    international = float(request.POST.get("international"))
 
-    displayData = someData(multiplier)
+    displayData = someData(ground, express, international)
 
     returnVal = render(
             request, 
             'contract_simulation/ranSimulation.html', 
             {
-                'multiplier': multiplier,
+                'ground': ground,
+                'express': express,
+                'international': international,
                 'displayData': displayData,
             }
         )
